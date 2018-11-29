@@ -1,0 +1,11 @@
+server:
+  port: 8090
+
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: accounts-service
+        uri: lb://accounts-service
+        predicates:
+        - Path=/accounts/**

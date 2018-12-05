@@ -9,3 +9,7 @@ spring:
         uri: lb://accounts-service
         predicates:
         - Path=/accounts/**
+      - id: statistics-service
+        uri: lb://statistics-service
+        predicates:
+        - Path=/statistics/**

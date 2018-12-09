@@ -20,6 +20,8 @@ import java.util.*
 class StatisticsServiceImpl(private val ratesService: ExchangeRatesService,
                             private val dataPointRepository: DataPointRepository) : StatisticsService {
 
+    override fun findByAccountName(accountName: String): List<DataPoint> = dataPointRepository.findByIdAccount(accountName)
+
     override fun save(accountName: String, account: Account): DataPoint {
         val instant = LocalDate.now().atStartOfDay().atZone(ZoneId.systemDefault()).toInstant()
         val dataPointId = DataPointId(accountName, Date.from(instant))

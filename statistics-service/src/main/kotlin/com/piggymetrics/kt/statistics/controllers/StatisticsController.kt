@@ -13,6 +13,7 @@ import javax.validation.Valid
 class StatisticsController(private val statisticsService: StatisticsService) {
 
     @PutMapping("/{accountName}")
-    fun saveAccountStatistics(@PathVariable accountName: String, @Valid @RequestBody account: Account): DataPoint =
-            statisticsService.save(accountName, account)
+    fun saveAccountStatistics(@PathVariable accountName: String, @Valid @RequestBody account: Account) {
+        statisticsService.save(accountName, account)
+    }
 }

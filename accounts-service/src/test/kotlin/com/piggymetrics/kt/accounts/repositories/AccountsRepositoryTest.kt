@@ -11,8 +11,8 @@ import org.springframework.test.context.junit4.SpringRunner
 import java.math.BigDecimal
 import java.time.LocalDateTime
 
-@RunWith(SpringRunner::class)
 @DataMongoTest
+@RunWith(SpringRunner::class)
 class AccountsRepositoryTest {
 
     @Autowired

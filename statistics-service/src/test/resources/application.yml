@@ -1,6 +1,2 @@
-server:
-  port: 8092
-
-
 rates:
   url: https://api.exchangeratesapi.io

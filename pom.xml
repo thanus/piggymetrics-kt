@@ -14,6 +14,7 @@
         <module>config</module>
         <module>registry</module>
         <module>gateway</module>
+        <module>auth-service</module>
         <module>accounts-service</module>
         <module>statistics-service</module>
     </modules>
